@@ -4,41 +4,193 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Part of Cosmos</title>
+    <meta name="description" content="Explore the cosmos and be part of something bigger than yourself.">
+    <meta name="theme-color" content="#3367D6">
+    
+    <!-- Google AdSense script -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6141344956835421"
      crossorigin="anonymous"></script>
     <!-- End Google AdSense script -->
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- PWA -->
     <link rel="manifest" href="manifest.json">
     <link rel="icon" href="icons/icon-192x192.png">
+    <link rel="apple-touch-icon" href="icons/icon-192x192.png">
 </head>
 <body>
     <header>
+        <div class="theme-switch">
+            <input type="checkbox" id="theme-toggle">
+            <label for="theme-toggle"><i class="fas fa-moon"></i></label>
+        </div>
         <h1>Part of Cosmos</h1>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Newsletter</a>
-            <a href="#">Youtube</a>
-            <a href="#">About the owner</a>
+            <a href="#home">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#newsletter">Newsletter</a>
+            <a href="#youtube">YouTube</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
         </nav>
     </header>
     <main>
-        <h2>The beginning of a new era</h2>
-        <p>"The world is changing and we have to change."</p>
+        <section id="home">
+            <h2 class="section-title">The beginning of a new era</h2>
+            <p>"The world is changing and we have to change with it. Explore the cosmos and be part of something bigger than yourself."</p>
+            
+            <!-- Social media sharing -->
+            <div class="social-links">
+                <a href="#" class="share-button" data-platform="facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="share-button" data-platform="twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="share-button" data-platform="linkedin"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </section>
         
-        <div class="video-placeholder">
-            <p>YouTube videos will be featured here.</p>
-        </div>
+        <section id="gallery">
+            <h2 class="section-title">Cosmic Gallery</h2>
+            <div class="gallery">
+                <!-- Gallery items will be dynamically populated with real images in production -->
+                <div class="gallery-item" data-full-image="https://images.nasa.gov/details-GSFC_20171208_Archive_e001362">
+                    <img src="https://images-assets.nasa.gov/image/GSFC_20171208_Archive_e001362/GSFC_20171208_Archive_e001362~thumb.jpg" alt="Galaxy">
+                    <div class="gallery-item-caption">
+                        <h3>Spiral Galaxy</h3>
+                        <p>A beautiful spiral galaxy captured by NASA.</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-full-image="https://images.nasa.gov/details-PIA12348">
+                    <img src="https://images-assets.nasa.gov/image/PIA12348/PIA12348~thumb.jpg" alt="Nebula">
+                    <div class="gallery-item-caption">
+                        <h3>Nebula Formation</h3>
+                        <p>Colorful nebula in deep space.</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-full-image="https://images.nasa.gov/details-PIA23645">
+                    <img src="https://images-assets.nasa.gov/image/PIA23645/PIA23645~thumb.jpg" alt="Black Hole">
+                    <div class="gallery-item-caption">
+                        <h3>Black Hole</h3>
+                        <p>Visualization of a black hole.</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-full-image="https://images.nasa.gov/details-PIA23122">
+                    <img src="https://images-assets.nasa.gov/image/PIA23122/PIA23122~thumb.jpg" alt="Earth">
+                    <div class="gallery-item-caption">
+                        <h3>Planet Earth</h3>
+                        <p>Our beautiful home planet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="youtube">
+            <h2 class="section-title">Featured Videos</h2>
+            <div class="video-placeholder">
+                <p>YouTube videos will be featured here.</p>
+                <p>Subscribe to our <a href="https://www.youtube.com" target="_blank">YouTube channel</a> for more cosmic content!</p>
+            </div>
+        </section>
+
+        <section id="newsletter">
+            <h2 class="section-title">Subscribe to Our Newsletter</h2>
+            <div class="form-container">
+                <form id="newsletter-form">
+                    <div class="form-group">
+                        <label for="newsletter-email">Email Address</label>
+                        <input type="email" id="newsletter-email" placeholder="your@email.com" required>
+                    </div>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="form-container">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="your@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Your message here..." required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
 
         <!-- Ad unit placeholder -->
         <div class="ad-placeholder">
             <p>Your ad will be displayed here.</p>
         </div>
         <!-- End Ad unit placeholder -->
+        
+        <section id="about">
+            <h2 class="section-title">About the Owner</h2>
+            <div class="form-container">
+                <p>Part of Cosmos was created by a passionate astronomer who wanted to share the wonders of the universe with everyone. Our mission is to make space exploration and astronomy accessible to all.</p>
+                <p>We believe that understanding our place in the cosmos helps us appreciate the beauty and fragility of our planet and inspires us to be better stewards of Earth.</p>
+            </div>
+        </section>
     </main>
     <footer>
-        <p>&copy; 2024 Part of Cosmos</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Part of Cosmos</h3>
+                <p>Exploring the wonders of the universe together.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#newsletter">Newsletter</a></li>
+                    <li><a href="#youtube">YouTube</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> info@partofcosmos.com</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Universe, Milky Way, Solar System, Earth</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2024 Part of Cosmos. All rights reserved.</p>
+        </div>
     </footer>
+    <!-- Scripts -->
+    <script src="script.js"></script>
     <script>
+        // Service Worker Registration
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('/sw.js')
@@ -48,4 +200,4 @@
         }
     </script>
 </body>
-</html> 
+</html>
