@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part of Cosmos</title>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-your-pub-id"
+     crossorigin="anonymous"></script>
+    <!-- End Google AdSense script -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <link rel="icon" href="icons/icon-192x192.png">
+</head>
+<body>
+    <header>
+        <h1>Part of Cosmos</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Newsletter</a>
+            <a href="#">Youtube</a>
+            <a href="#">About the owner</a>
+        </nav>
+    </header>
+    <main>
+        <h2>The beginning of a new era</h2>
+        <p>"The world is changing and we have to change."</p>
+        
+        <div class="video-placeholder">
+            <p>YouTube videos will be featured here.</p>
+        </div>
+
+        <!-- Ad unit placeholder -->
+        <div class="ad-placeholder">
+            <p>Your ad will be displayed here.</p>
+        </div>
+        <!-- End Ad unit placeholder -->
+    </main>
+    <footer>
+        <p>&copy; 2024 Part of Cosmos</p>
+    </footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                .then((reg) => console.log('Service worker registered.', reg))
+                .catch((err) => console.log('Service worker not registered.', err));
+            });
+        }
+    </script>
+</body>
+</html> 
